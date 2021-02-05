@@ -17,4 +17,4 @@ if TELEGRAM_SUPPORT_CHAT_ID is None or not str(TELEGRAM_SUPPORT_CHAT_ID).lstrip(
 TELEGRAM_SUPPORT_CHAT_ID = int(TELEGRAM_SUPPORT_CHAT_ID)
 
 
-WELCOME_MESSAGE = os.getenv("WELCOME_MESSAGE", "Здравствуйте! Вы подключились к службе поддержки канала M.O.D.E.L. ROSTOV(RND). Пожалуйста введите свой вопрос, Вам ответят в ближайшее время.")
+WELCOME_MESSAGE = os.getenv("WELCOME_MESSAGE", "Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ! Р’С‹ РїРѕРґРєР»СЋС‡РёР»РёСЃСЊ Рє СЃР»СѓР¶Р±Рµ РїРѕРґРґРµСЂР¶РєРё РєР°РЅР°Р»Р° M.O.D.E.L. ROSTOV(RND). РџРѕР¶Р°Р»СѓР№СЃС‚Р° РІРІРµРґРёС‚Рµ СЃРІРѕР№ РІРѕРїСЂРѕСЃ, Р’Р°Рј РѕС‚РІРµС‚СЏС‚ РІ Р±Р»РёР¶Р°Р№С€РµРµ РІСЂРµРјСЏ.")
