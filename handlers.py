@@ -16,6 +16,19 @@ def start(update, context):
     )
 
 
+def oplata(update, context):
+    update.message.reply_text("💌Сейчас Вам вышлют реквизиты для оплаты месячного доступа в платный канал.\n💣Только здесь новые модели! Информация постоянно обновляется и дополняется.")
+
+    user_info = update.message.from_user.to_dict()
+
+    context.bot.send_message(
+        chat_id=TELEGRAM_SUPPORT_CHAT_ID,
+        text=f"""
+💳 Пользователь запросил реквизиты для оплаты {user_info}.
+        """,
+    )
+
+
 def forward_to_chat(update, context):
     """{ 
         'message_id': 5, 
@@ -54,6 +67,7 @@ def forward_to_user(update, context):
 
 def setup_dispatcher(dp):
     dp.add_handler(CommandHandler('start', start))
+	dp.add_handler(CommandHandler('oplata', oplata))
     dp.add_handler(MessageHandler(Filters.chat_type.private, forward_to_chat))
     dp.add_handler(MessageHandler(Filters.chat(TELEGRAM_SUPPORT_CHAT_ID) & Filters.reply, forward_to_user))
     return dp
